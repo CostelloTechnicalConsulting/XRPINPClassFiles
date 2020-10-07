@@ -1,1 +1,1 @@
-install.packages(c("tidyverse","Rserve"))
+install.packages(c("tidyverse","Rserve","phonics","corrplot"))
