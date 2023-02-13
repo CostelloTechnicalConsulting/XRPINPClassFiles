@@ -1,13 +1,16 @@
 # Solutions to Exercises
 # ======================
 
-
+# Ch 1
+# ======================
 sd(0:100)
 
 
 demo(plotmath)
 
 
+# Ch 2
+# ======================
 atan(1 / 1:1000)
 
 
@@ -34,6 +37,8 @@ all(false_and_missing)
 all(mixed)
 
 
+# Ch 3
+# ======================
 class(Inf)
 class(NA)
 class(NaN) 
@@ -55,6 +60,8 @@ swede  <- 3
 ls(pattern = "a")
 
 
+# Ch 4
+# ======================
 n <- seq_len(20)
 triangular <- n * (n + 1) / 2
 names(triangular) <- letters[seq_along(n)]
@@ -73,6 +80,8 @@ wilkinson_21 <- below_the_diagonal + above_the_diagonal + on_the_diagonal
 eigen(wilkinson_21)$values 
 
 
+# Ch 5
+# ======================
 list(
   "0 to 9"   = c(0, 1, 4, 9),
   "10 to 19" = 16,
@@ -110,6 +119,8 @@ both_beavers <- rbind(beaver1, beaver2)
 subset(both_beavers, as.logical(activ))
 
 
+# Ch 6
+# ======================
 multiples_of_pi <- new.env()
 multiples_of_pi[["two_pi"]] <- 2 * pi   
 multiples_of_pi$three_pi <- 3 * pi
@@ -129,6 +140,8 @@ args_and_body(var)
 args_and_body(alarm)
 
 
+# Ch 7
+# ======================
 formatC(pi, digits = 16)
 
 
@@ -148,6 +161,8 @@ bonuses <- cut(
 table(bonuses)
 
 
+# Ch 8
+# ======================
 score <- two_d6(1)
 if(score %in% c(2, 3, 12))
 {
@@ -191,6 +206,8 @@ for(i in min(nchar_sea_shells):max(nchar_sea_shells))
 }
 
 
+# Ch 9
+# ======================
 vapply(wayans, length, integer(1))
 
 
@@ -198,6 +215,8 @@ with(commute_data, tapply(time, mode, quantile, prob = 0.75))
 ddply(commute_data, .(mode), summarise, time_p75 = quantile(time, 0.75))
 
 
+# Ch 10
+# ======================
 install.packages("lubridate")
 
 
@@ -205,6 +224,8 @@ pkgs <- installed.packages()
 table(pkgs[, "LibPath"])
 
 
+# Ch 11
+# ======================
 in_string <- c("1940-07-07", "1940-10-09", "1942-06-18", "1943-02-25")
 (parsed <- strptime(in_string, "%Y-%m-%d"))
 (out_string <- strftime(parsed, "%a %d %b %y"))
@@ -246,6 +267,9 @@ zodiac_sign <- function(x)
 nicolaus_copernicus_birth_date <- as.Date("1473-02-19")
 zodiac_sign(nicolaus_copernicus_birth_date)
 
+######################################################################
+## Section 2
+######################################################################
 
 hafu_file <- system.file("extdata", "hafu.csv", package = "learningr")
 hafu_data <- read.csv(hafu_file)

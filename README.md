@@ -4,6 +4,11 @@
 
 ### Resources
 
-#### Hadkey Wickham's paper on Tidy Data
+#### R Documentation
+Search all CRAN, Bioconductor and GitHub packages
+https://www.rdocumentation.org/
+
+
+#### Hadley Wickham's paper on Tidy Data
 http://vita.had.co.nz/papers/tidy-data.pdf
 
