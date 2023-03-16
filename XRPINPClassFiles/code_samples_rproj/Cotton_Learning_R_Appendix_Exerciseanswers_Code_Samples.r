@@ -3,14 +3,22 @@
 
 # Ch 1
 # ======================
+
+# Ex 1-2
+
 sd(0:100)
 
+
+# Ex 1-3
 
 demo(plotmath)
 
 
 # Ch 2
 # ======================
+
+# Ex 2-1
+
 atan(1 / 1:1000)
 
 
@@ -18,6 +26,8 @@ x <- 1:1000
 y <- atan(1 / x)
 z <- 1 / tan(y)
 
+
+# Ex 2-2
 
 x == z
 identical(x, z)
@@ -39,11 +49,16 @@ all(mixed)
 
 # Ch 3
 # ======================
+
+# Ex 3-1
+
 class(Inf)
 class(NA)
 class(NaN) 
 class("")
 
+
+# Ex 3-2
 
 pets <- factor(sample(
   c("dog", "cat", "hamster", "goldfish"),
@@ -54,6 +69,8 @@ head(pets)
 summary(pets)     
 
 
+# Ex 3-3
+
 carrot <- 1
 potato <- 2
 swede  <- 3
@@ -62,14 +79,21 @@ ls(pattern = "a")
 
 # Ch 4
 # ======================
+
+# Ex 4-1
+
 n <- seq_len(20)
 triangular <- n * (n + 1) / 2
 names(triangular) <- letters[seq_along(n)]
 triangular[c("a", "e", "i", "o")]
 
 
+# Ex 4-2
+
 diag(abs(seq.int(-11, 11)))
 
+
+# Ex 4-3
 
 identity_20_by_21 <- diag(rep.int(1, 20), 20, 21)    
 below_the_diagonal <- rbind(0, identity_20_by_21) 
@@ -82,6 +106,9 @@ eigen(wilkinson_21)$values
 
 # Ch 5
 # ======================
+
+# Ex 5-1
+
 list(
   "0 to 9"   = c(0, 1, 4, 9),
   "10 to 19" = 16,
@@ -109,9 +136,13 @@ groups <- cut(
 split(square_numbers, groups)
 
 
+# Ex 5-2
+
 iris_numeric <- iris[, 1:4]
 colMeans(iris_numeric)
 
+
+# Ex 5-3
 
 beaver1$id <- 1
 beaver2$id <- 2
@@ -121,6 +152,9 @@ subset(both_beavers, as.logical(activ))
 
 # Ch 6
 # ======================
+
+# Ex 6-1
+
 multiples_of_pi <- new.env()
 multiples_of_pi[["two_pi"]] <- 2 * pi   
 multiples_of_pi$three_pi <- 3 * pi
@@ -128,9 +162,13 @@ assign("four_pi", 4 * pi, multiples_of_pi)
 ls(multiples_of_pi)
 
 
+# Ex 6-2
+
 is_even <- function(x) (x %% 2) == 0
 is_even(c(-5:5, Inf, -Inf, NA, NaN))
 
+
+# Ex 6-3
 
 args_and_body <- function(fn)
 {
