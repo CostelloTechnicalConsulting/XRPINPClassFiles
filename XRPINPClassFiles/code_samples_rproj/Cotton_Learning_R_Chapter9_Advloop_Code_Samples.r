@@ -169,7 +169,7 @@ baby_gender_report <- function(gender)
     gender,
     male   = "It's a boy!",
     female = "It's a girl!",
-    "Um..."
+    "It's other!"
   )
 }
 

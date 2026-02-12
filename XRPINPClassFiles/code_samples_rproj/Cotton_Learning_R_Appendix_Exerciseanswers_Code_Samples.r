@@ -249,6 +249,12 @@ for(i in min(nchar_sea_shells):max(nchar_sea_shells))
 vapply(wayans, length, integer(1))
 
 
+summary(state.x77)
+state_df <- data.frame(state.x77)
+numcolwise(mean)(state_df)
+numcolwise(sd)(state_df)
+
+
 with(commute_data, tapply(time, mode, quantile, prob = 0.75))
 ddply(commute_data, .(mode), summarise, time_p75 = quantile(time, 0.75))
 
